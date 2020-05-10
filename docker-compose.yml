@@ -3,29 +3,29 @@
 
 version: "3"
 services:
-  mbos:
+  dbos:
     image: mysql:5.7
     volumes:
       - mysql_storage:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: monu9900
-      MYSQL_USER: divya raj
-      MYSQL_PASSWORD: monu
+      MYSQL_ROOT_PASSWORD: carryminati
+      MYSQL_USER: Anjali
+      MYSQL_PASSWORD: carryminati
       MYSQL_DATABASE: mydatabase
 
   drupal:
     image: drupal:latest
     restart: always
     depends_on:
-      - mbos
+      - dbos
     ports:
       - 7070:80
     environment:
       POSTGRES_DB: mydatabase
-      POSTGRES_USER: divya raj
-      POSTGRES_HOST: mbos
-      POSTGRES_PASSWORD: monu
+      POSTGRES_USER: Anjali
+      POSTGRES_HOST: dbos
+      POSTGRES_PASSWORD: carryminati
     volumes:
       - drupal_storage:/var/www/html
     
