@@ -24,7 +24,6 @@ Set-up for project:-
 3. Create the **.yml** file using `vim docker-compose.yml`. docker-compose.yml is the default file where code is written. Since each compose file has same file name, it is a good practise to make seperate directory for each code.
 4. Inside this .yml file we write our code. To start editing the text editor press * *i* * on the keyboard. After we finish writing the code, to save the file, press * *esc* * on the keyboard and type `:w` to save the file and `:q` to exit the file. To save and exit in one step, type`:wq` together.
 5. Inside the directory itself run the command `docker-compose up` to launch all the containers in the infrastructure in one go. To launch the containers in background, use `docker-compose up -d`.
-6. Our **Drupal** site is launched using mysql as database.
 6. Our **Drupal** site is launched using MySQL as database.
 7. To stop container, use `docker-compose stop` in another terminal on same directory or press left Ctrl + C.
 
